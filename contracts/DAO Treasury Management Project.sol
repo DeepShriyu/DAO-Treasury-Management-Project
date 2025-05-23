@@ -46,7 +46,7 @@ contract DAOTreasury is AccessControl, ReentrancyGuard, Pausable {
 
     constructor() {
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
-        _grantRole(ADMIN_ROLE, msg.sender);
+        _grantRole(ADMIN_ROLE, msg.sender)
         _grantRole(EXECUTOR_ROLE, msg.sender);
         _grantRole(PROPOSER_ROLE, msg.sender);
     }
@@ -105,7 +105,16 @@ contract DAOTreasury is AccessControl, ReentrancyGuard, Pausable {
 
         emit ProposalRejected(_proposalId, msg.sender);
     }
-
+ event ProposalCreated(uint256 indexed proposalId, address indexed proposer, string description);
+    event ProposalApproved(uint256 indexed proposalId, address indexed approver);
+    event ProposalRejected(uint256 indexed proposalId, address indexed admin);
+    event ProposalCanceled(uint256 indexed proposalId, address indexed proposer);
+    event ProposalExecuted(uint256 indexed proposalId, address indexed executor);
+    event FundsReceived(address indexed sender, uint256 amount);
+    event TokensTransferred(address indexed token, address indexed to, uint256 amount);
+    event TimelockUpdated(uint256 newTimelock);
+    event ProposalUpdated(uint256 indexed proposalId, string newDescription);
+    event EmergencyWithdrawal(address to, uint256 amount);
     function cancelProposal(uint256 _proposalId) external {
         Proposal storage proposal = proposals[_proposalId];
         require(proposal.proposer == msg.sender, "Only proposer can cancel");
