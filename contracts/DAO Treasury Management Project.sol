@@ -10,7 +10,7 @@ import "@openzeppelin/contracts/security/Pausable.sol";
     bytes32 public constant EXECUTOR_ROLE = keccak256("EXECUTOR_ROLE");
     bytes32 public constant PROPOSER_ROLE = keccak256("PROPOSER_ROLE")
 
-    uint256 public proposalCount;
+    uint256 public proposalCoun
     uint256 public executionTimelock = 2 days;
     uint256 public proposalExpiry = 7 days;
 
