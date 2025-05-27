@@ -12,8 +12,7 @@ import "@openzeppelin/contracts/security/Pausable.sol";
 
     uint256 public proposalCoun
     uint256 public executionTimelock = 2 days;
-    uint256 public proposalExpiry = 7 days;
-
+    uint256 public proposalExpiry 
     enum ProposalState { Pending, Approved, Executed, Rejected, Canceled }
 
     struct Proposal {
