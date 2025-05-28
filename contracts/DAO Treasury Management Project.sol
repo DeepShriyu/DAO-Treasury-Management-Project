@@ -16,7 +16,7 @@ import "@openzeppelin/contracts/security/Pausable.sol";
     enum ProposalState { Pending, Approved, Executed, Rejected, Canceled }
 
     struct Proposal {
-        uint256 id;
+        uint256
         address proposer;
         address target;
         uint256 value;
