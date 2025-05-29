@@ -11,7 +11,7 @@ import "@openzeppelin/contracts/security/Pausable.sol";
     bytes32 public constant PROPOSER_ROLE = keccak256("PROPOSER_ROLE")
 
     uint256 public proposalCoun
-    uint256 public executionTimelock = 2 days;
+    uint256 public executionTimelock = 2 day
     uint256 public proposalExpiry 
 
 
