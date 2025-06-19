@@ -72,13 +72,6 @@ contract GovernanceTimelock is AccessControl, ReentrancyGuard, Pausable {
         _grantRole(PROPOSER_ROLE, msg.sender);
     }
 
-    receive() external payable {
-        emit FundsReceived(msg.sender, msg.value);
-    }
-
-    fallback() external payable {
-        emit FundsReceived(msg.sender, msg.value);
-    }
 
     // Create a proposal
     function createProposal(
