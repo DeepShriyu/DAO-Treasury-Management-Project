@@ -140,10 +140,6 @@ contract GovernanceTimelock is AccessControl, ReentrancyGuard, Pausable {
         emit ProposalRejected(_proposalId, msg.sender);
     }
 
-    function cancelProposal(uint256 _proposalId) external {
-        Proposal storage proposal = proposals[_proposalId];
-        require(proposal.proposer == msg.sender, "Only proposer can cancel");
-        require(proposal.state == ProposalState.Pending, "Only pending proposals can be canceled");
 
         proposal.state = ProposalState.Canceled;
 
