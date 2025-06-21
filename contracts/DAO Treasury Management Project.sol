@@ -17,10 +17,6 @@ contract GovernanceTimelock is AccessControl, ReentrancyGuard, Pausable {
 
 
 
-    uint256 public proposalCount;
-    uint256 public executionTimelock = 2 days;
-    uint256 public propos
-
 
     enum ProposalState {
         Pending,
