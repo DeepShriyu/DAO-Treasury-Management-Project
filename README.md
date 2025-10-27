@@ -1,4 +1,4 @@
-DAO Treasury Management Project
+DAO Treasury Management 
 Project Description
 The DAO Treasury Management Project is a decentralized solution for managing collective funds transparently and efficiently. It provides a robust framework for decentralized autonomous organizations (DAOs) to handle their treasury operations with built-in governance, security, and transparency mechanisms.
 This smart contract system allows DAOs to create, approve, and execute financial proposals through a time-locked and role-based permission system. The treasury can hold and manage both native cryptocurrency (ETH) and ERC-20 tokens with proper accounting and security controls.
